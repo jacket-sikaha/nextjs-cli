@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     // 使用 formidable 库解析 multipart/form-data 请求体
     const form = formidable({
       multiples: true,
-      uploadDir: process.cwd() + "/image-store",
+      uploadDir: "./image-store",
       filename: function (name, ext, part) {
         const { originalFilename, mimetype } = part;
         return (

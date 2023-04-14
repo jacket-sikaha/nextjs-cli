@@ -33,6 +33,7 @@ export default async function handler(
           res.status(200).send({
             message: "登陆成功",
             token,
+            loc: process.cwd(),
           });
         }
       );
