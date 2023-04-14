@@ -25,7 +25,7 @@ export default async function handler(
       jwt.sign(
         { username },
         process.env.jwtKey,
-        { expiresIn: "60s" },
+        { expiresIn: `${process.env.expiresIn}s` },
         (err, token) => {
           if (err) {
             throw err;
